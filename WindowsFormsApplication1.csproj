@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBE29CC6-A117-4F42-AD2D-475410E27AAC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIPS</RootNamespace>
+    <AssemblyName>SIPS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SIPS.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\Biblioteki\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\Biblioteki\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\Biblioteki\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connect_Mysql.cs" />
+    <Compile Include="Connect_start.cs" />
+    <Compile Include="Dodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj.Designer.cs">
+      <DependentUpon>Dodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajObcy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajObcy.Designer.cs">
+      <DependentUpon>DodajObcy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajPP.Designer.cs">
+      <DependentUpon>DodajPP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGlowne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGlowne.Designer.cs">
+      <DependentUpon>MenuGlowne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formatowanie.cs" />
+    <Compile Include="Logowanie.cs" />
+    <Compile Include="NoweLogowanie.cs" />
+    <Compile Include="PocztaPolska.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocztaPolska.Designer.cs">
+      <DependentUpon>PocztaPolska.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PocztaSpecjalna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PocztaSpecjalna.Designer.cs">
+      <DependentUpon>PocztaSpecjalna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popraw.Designer.cs">
+      <DependentUpon>Popraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoprawPocztaPolska.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoprawPocztaPolska.Designer.cs">
+      <DependentUpon>PoprawPocztaPolska.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoprawPPwPS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoprawPPwPS.Designer.cs">
+      <DependentUpon>PoprawPPwPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popraw_zestawienie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popraw_zestawienie.Designer.cs">
+      <DependentUpon>Popraw_zestawienie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Progress_Clock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Progress_Clock.Designer.cs">
+      <DependentUpon>Progress_Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resort.Designer.cs">
+      <DependentUpon>Resort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serwis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serwis.Designer.cs">
+      <DependentUpon>Serwis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatystykiPDF.cs" />
+    <Compile Include="Sztab_Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sztab_Start.Designer.cs">
+      <DependentUpon>Sztab_Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WyborDrukowania_PP_PS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WyborDrukowania_PP_PS.Designer.cs">
+      <DependentUpon>WyborDrukowania_PP_PS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WykazPaczkiPocztaPDF.cs" />
+    <Compile Include="WykazPDF.cs" />
+    <Compile Include="WykazPocztaPDF.cs" />
+    <Compile Include="WykazPocztaPoleconePDF.cs" />
+    <Compile Include="Wykaz_Poprawiony_Polecone_PP_PS.cs" />
+    <Compile Include="Wykaz_Poprawiony_PP_Zwykle.cs" />
+    <Compile Include="ZestawieniePS.cs" />
+    <Compile Include="ZestawienieZbiorcze.cs" />
+    <Compile Include="ZestawienieZbiorczePocztaFirmowa.cs" />
+    <Compile Include="ZestawienieZbiorczeZagraniczne.cs" />
+    <Compile Include="Zestawienie_tryb1.cs" />
+    <Compile Include="Zestawienie_tryb2.cs" />
+    <Compile Include="Zestawienie_tryb3.cs" />
+    <Compile Include="Zestawienie_tryb4.cs" />
+    <Compile Include="ZglosBlad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZglosBlad.Designer.cs">
+      <DependentUpon>ZglosBlad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZmianaHasla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZmianaHasla.Designer.cs">
+      <DependentUpon>ZmianaHasla.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dodaj.pl-PL.resx">
+      <DependentUpon>Dodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dodaj.resx">
+      <DependentUpon>Dodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajObcy.resx">
+      <DependentUpon>DodajObcy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajPP.resx">
+      <DependentUpon>DodajPP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.pl-PL.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGlowne.resx">
+      <DependentUpon>MenuGlowne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocztaPolska.resx">
+      <DependentUpon>PocztaPolska.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PocztaSpecjalna.resx">
+      <DependentUpon>PocztaSpecjalna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popraw.resx">
+      <DependentUpon>Popraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoprawPocztaPolska.resx">
+      <DependentUpon>PoprawPocztaPolska.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoprawPPwPS.resx">
+      <DependentUpon>PoprawPPwPS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popraw_zestawienie.resx">
+      <DependentUpon>Popraw_zestawienie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progress_Clock.resx">
+      <DependentUpon>Progress_Clock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resort.resx">
+      <DependentUpon>Resort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serwis.resx">
+      <DependentUpon>Serwis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sztab_Start.resx">
+      <DependentUpon>Sztab_Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WyborDrukowania_PP_PS.resx">
+      <DependentUpon>WyborDrukowania_PP_PS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZglosBlad.resx">
+      <DependentUpon>ZglosBlad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZmianaHasla.resx">
+      <DependentUpon>ZmianaHasla.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
